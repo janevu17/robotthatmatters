@@ -1,0 +1,25 @@
+int buttonPressed == 0;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+ 
+  pinMode(RED_LED, OUTPUT);
+  pinMode(PUSH1, INPUT_PULLUP);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly: 
+  if(digitalRead == LOW){
+    buttonPressed = !buttonPressed;
+    delay(1000)
+  }
+  if (buttonPressed == 1){
+  Serial.println("LIGHT ON");
+  digitalWrite(RED_LED, HIGH);
+  delay(500)
+  Serial.println("LIGHT OFF");
+  digitalWrite(RED_LED, LOW);
+  delay(500)
+  }
+}
